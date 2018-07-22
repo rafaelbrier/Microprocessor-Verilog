@@ -1,0 +1,35 @@
+RAFAEL MARCIO DA SILVA BRIER DE SALES      201369048A
+IGOR HENRIQUE SILVA BARBOSA                201769001B
+LUIZ FILIPE PERES MOURA ARAUJO             201365169A
+
+	Este programa calcula o fatorial do número salvo na mémoria RAM posição (0 e 1).
+		
+
+SOftware (ROM):
+
+initial begin   // Programa
+	mem[0]   = 16'b000100000000;              //Carrega (Pos0_RAM) na saída da ula       		Saida Ula = 6
+        mem[1]   = 16'b010000000010;		  //Subtrai (Pos2_RAM=1) da (Pos0_RAM)        		Saída Ula = 5
+	mem[2]   = 16'b001000000000;		  //Salva resultado na (Pos0_RAM)             		Saida Ula = 5	
+	mem[3]   = 16'b010100000001;		  //Multiplica resultado pela (Pos1_RAM)		Saida Ula = 30
+	mem[4]   = 16'b001000000001;		  //Salva resultado na (Pos1_RAM)             		Saida Ula = 30
+	mem[5]   = 16'b000100000000;		  //Carrega (Pos0_RAM) na saida da ula        		Saida Ula = 5
+	mem[6]   = 16'b011100000010;              //Compara saída da ula com (Pos2_RAM=1)     		Saida Ula = 0 ou 1
+	mem[7]   = 16'b110001100100;              //Se comparação verdadeira software pula pra Pos100_ROM
+	mem[8]   = 16'b101100000000;              //Se comparação falsa software pula pra Pos0_ROM 
+	
+	mem[100] = 16'b000100000001;		
+        mem[101] = 16'b101001100100;
+	mem[102] = 16'b001100000011;
+end
+
+Variáveis (RAM):
+
+initial begin   // Inicialização das variáveis
+	mem[0]   = 16'd6;
+	mem[1]   = 16'd6;
+	mem[2]   = 16'd1;
+	mem[3]   = 16'd0;	
+end
+
+

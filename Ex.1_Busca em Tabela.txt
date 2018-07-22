@@ -1,0 +1,108 @@
+RAFAEL MARCIO DA SILVA BRIER DE SALES      201369048A
+IGOR HENRIQUE SILVA BARBOSA                201769001B
+LUIZ FILIPE PERES MOURA ARAUJO             201365169A
+
+
+SOftware (ROM):
+
+initial begin   // Programa
+        mem[0] = 12'b000100000000;      //carregou (Pos0_RAM) na saída da ULA
+        mem[1] = 12'b011100001010;      //comparar saida da ULA com (pos10_RAM)
+	mem[2] = 12'b110011001000;      //Se comparação verdadeira pula pra (pos200_ROM)
+	
+	mem[3] = 12'b000100000000;      //carregou (Pos0_RAM) na saída da ULA
+	mem[4] = 12'b011100001011;      //comparar saida da ULA com (pos11_RAM)
+	mem[5] = 12'b110011001010;      //Se comparação verdadeira pula pra (pos202_ROM)
+	
+	mem[6] = 12'b000100000000;      //carregou (Pos0_RAM) na saída da ULA
+	mem[7] = 12'b011100001100;      //comparar saida da ULA com (pos12_RAM)
+	mem[8] = 12'b110011001100;      //Se comparação verdadeira pula pra (pos204_ROM)
+	
+	mem[9] = 12'b000100000000;      //carregou (Pos0_RAM) na saída da ULA
+	mem[10] = 12'b011100001101;      //comparar saida da ULA com (pos13_RAM)
+	mem[11] = 12'b110011001110;      //Se comparação verdadeira pula pra (pos206_ROM)
+	
+	mem[12] = 12'b000100000000;      //carregou (Pos0_RAM) na saída da ULA
+	mem[13] = 12'b011100001110;      //comparar saida da ULA com (pos14_RAM)
+	mem[14] = 12'b110011010000;      //Se comparação verdadeira pula pra (pos208_ROM)
+	
+	mem[15] = 12'b000100000000;      //carregou (Pos0_RAM) na saída da ULA
+	mem[16] = 12'b011100001111;      //comparar saida da ULA com (pos15_RAM)
+	mem[17] = 12'b110011010010;      //Se comparação verdadeira pula pra (pos210_ROM)
+	
+	mem[18] = 12'b000100000000;      //carregou (Pos0_RAM) na saída da ULA
+	mem[19] = 12'b011100010000;      //comparar saida da ULA com (pos16_RAM)
+	mem[20] = 12'b110011010100;      //Se comparação verdadeira pula pra (pos212_ROM)
+	
+	mem[21] = 12'b000100000000;      //carregou (Pos0_RAM) na saída da ULA
+	mem[22] = 12'b011100010001;      //comparar saida da ULA com (pos17_RAM)
+	mem[23] = 12'b110011010110;      //Se comparação verdadeira pula pra (pos214_ROM)
+	
+	
+	mem[24] = 12'b000100000000;      //carregou (Pos0_RAM) na saída da ULA
+	mem[25] = 12'b011100010010;      //comparar saida da ULA com (pos18_RAM)
+	mem[26] = 12'b110011011000;      //Se comparação verdadeira pula pra (pos216_ROM)
+	
+	mem[27] = 12'b000100000000;      //carregou (Pos0_RAM) na saída da ULA
+	mem[28] = 12'b011100010011;      //comparar saida da ULA com (pos19_RAM)
+	mem[29] = 12'b110011011010;      //Se comparação verdadeira pula pra (pos218_ROM)
+	
+	mem[200] = 12'b000100010100;    //'Printa' (addr10_RAM) 
+	mem[201] = 12'b101011001001;   
+	mem[202] = 12'b000100010101;    //'Printa' (addr11_RAM) 
+	mem[203] = 12'b101011001011;
+	mem[204] = 12'b000100010110;    //'Printa' (addr12_RAM) 
+	mem[205] = 12'b101011001101;
+	mem[206] = 12'b000100010111;    //'Printa' (addr13_RAM) 
+	mem[207] = 12'b101011001111;
+	mem[208] = 12'b000100011000;    //'Printa' (addr14_RAM) 
+	mem[209] = 12'b101011010001;
+	mem[210] = 12'b000100011001;    //'Printa' (addr15_RAM) 
+	mem[211] = 12'b101011010011;
+	mem[212] = 12'b000100011010;    //'Printa' (addr16_RAM) 
+	mem[213] = 12'b101011010101;
+	mem[214] = 12'b000100011011;    //'Printa' (addr17_RAM) 
+	mem[215] = 12'b101011010111;
+	mem[216] = 12'b000100011100;    //'Printa' (addr18_RAM) 
+	mem[217] = 12'b101011011001;
+	mem[218] = 12'b000100011101;    //'Printa' (addr19_RAM) 
+	mem[219] = 12'b101011011011;
+end
+
+
+Variáveis (RAM):
+
+initial begin   // Inicialização das variáveis
+	mem[0]   = 16'd325;
+	mem[1]   = 16'h0000;
+	mem[2]   = 16'h0000;
+	mem[3]   = 16'h0000;
+	mem[4]   = 16'h0000;
+	mem[5]   = 16'h0000;
+	mem[6]   = 16'h0000;
+	mem[7]   = 16'h0000;
+	mem[8]   = 16'h0000;
+	mem[9]   = 16'h0000;
+	mem[10]  = 16'd1743;
+	mem[11]  = 16'd201;
+	mem[12]  = 16'd1023;
+	mem[13]  = 16'd890;
+	mem[14]  = 16'd521;
+	mem[15]  = 16'd102;
+	mem[16]  = 16'd325;
+	mem[17]  = 16'd765;
+	mem[18]  = 16'd893;
+	mem[19]  = 16'd567;		
+	mem[20]  = 16'd10;
+	mem[21]  = 16'd11;
+	mem[22]  = 16'd12;
+	mem[23]  = 16'd13;
+	mem[24]  = 16'd14;
+	mem[25]  = 16'd15;
+	mem[26]  = 16'd16;
+	mem[27]  = 16'd17;
+	mem[28]  = 16'd18;
+	mem[29]  = 16'd19;
+end
+
+

@@ -1,0 +1,34 @@
+RAFAEL MARCIO DA SILVA BRIER DE SALES      201369048A
+IGOR HENRIQUE SILVA BARBOSA                201769001B
+LUIZ FILIPE PERES MOURA ARAUJO             201365169A
+
+
+SOftware (ROM):
+
+initial begin   // Programa
+	mem[0]  = 12'b000100000000;        //LD 0
+	mem[1]  = 12'b011100000100;        //EQU 4
+        mem[2]  = 12'b101100000101;        //JZ 5 
+	mem[3]  = 12'b000100000010;	   //LD 2
+	mem[4]  = 12'b101000001001;        //JMP 9
+	mem[5]  = 12'b000100000000;        //LD 0
+	mem[6]  = 12'b011100000101;        //EQU 5
+	mem[7]  = 12'b101100001010;        //JZ 10
+	mem[8]  = 12'b000100000011;        //LD 3
+	mem[9]  = 12'b001000000001;        //SET 1
+	mem[10] = 12'b101000001010;        //JMP 10
+end
+
+
+Variáveis (RAM):
+
+initial begin   // Inicialização das variáveis
+	mem[0]  = 16'd0;
+	mem[2]  = 16'd100;
+        mem[3]  = 16'd55; 
+	mem[4]  = 16'0;
+	mem[5]  = 16'1;
+		
+end
+
+

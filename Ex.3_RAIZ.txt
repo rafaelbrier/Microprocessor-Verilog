@@ -1,0 +1,43 @@
+RAFAEL MARCIO DA SILVA BRIER DE SALES      201369048A
+LUIZ FILIPE PERES MOURA ARAUJO             201365169A
+ITALO FERNANDO VALLE ALVARENGA             201269013A
+
+	Este programa calcula o fatorial do número salvo na mémoria RAM posição (0 e 1).
+		
+
+SOftware (ROM):
+
+initial begin   // Programa
+	mem[0]  = 12'b000100000001;        //LD 1     CARREGAR Y
+	mem[1]  = 12'b011000000010;        //DIV 2	 DIVIDIR Y POR 2
+	mem[2]  = 12'b001000000011;        //SET 3    SALVAR RESULTADO NA POSIÇAO 3 DA RAM
+ 	mem[3]  = 12'b000100000000;        //LD 0		 CARREGAR X
+	mem[4]  = 12'b011000000010;        //DIV 2	 DIVIDIR X POR 2
+	mem[5]  = 12'b011000000001;        //DIV 1    DIVIDIR RESULTADO POR Y
+	mem[6]  = 12'b001100000010;        //ADD 3	 ADICIONAR RESULTADO COM A POSIÇAO 3
+  	mem[7]  = 12'b001000000001;	     //SET 1	 SALVAR NA POSIÇÃO 1= Y
+	mem[8]  = 12'b000100000101;        //LD 5     CARREGAR POSIÇAO 5 - CONTADOR
+  	mem[9]  = 12'b001100000100;        //ADD 4	 ADICIONAR 1 NO CONTADOR    
+	mem[10] = 12'b011100000110;        //EQ 6     VERIFICAR SE O CONTADOR É IGUAL A POS 6 => 2
+	mem[11] = 12'b101100000000;        //JZ 0		 SE FOR DIFERENTE EXECUTAR NOVAMENTE
+	mem[12] = 12'b000100000001;        //LD 1     CARREGAR RESPOSTA NA SAIDA
+	mem[13] = 12'b101000001101;        //JMP 13   LOOP INFINITO FIM
+end
+
+Variáveis (RAM):
+
+initial begin   // Inicialização das variáveis
+	mem[0]  = 16'd9;  //x
+	mem[1]  = 16'd9;  //y
+	mem[2]  = 16'd2;
+	mem[3]  = 16'd0;   //salva resultado
+  	mem[4]  = 16'd1; 	
+	mem[5]  = 16'd0;
+  	mem[6]  = 16'd2; 	
+	mem[7]  = 16'd0;
+   	mem[8]  = 16'd0; 	
+	mem[9]  = 16'd0;
+ 	mem[10]  = 16'd0; 		
+end
+
+
